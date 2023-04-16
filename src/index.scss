@@ -86,8 +86,7 @@ ol, ul {
 /* elements */
 body {
   font: 400 24px 'Cabin', sans-serif;
-  background: #182546;;
-  color: #ffffff;
+  background: #182546;
 }
 
 .App {
@@ -95,6 +94,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   margin: 0 5.3vw;
+  color: white;
 }
 
 .header {
@@ -247,11 +247,19 @@ body {
   border-radius: 20px;
   &__close-button {
     padding: 1vh 1vh 0 0;
+
+  }
+}
+.modal-window.animated {
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  &.show{
+    opacity: 1;
+    visibility: visible;
   }
 }
 svg:hover rect {
   fill: #DD4F4F;
   transition: 0.15s;
-}
-.calculator {
 }
