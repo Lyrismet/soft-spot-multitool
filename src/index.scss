@@ -90,11 +90,11 @@ body {
   color: #ffffff;
 }
 
-.app {
+.App {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 100vh;
+  margin: 0 5.3vw;
 }
 
 .header {
@@ -164,7 +164,7 @@ body {
 
   &__buttons {
     width: 100%;
-    margin-top: 10vh;
+    margin-top: 17vh;
     display: flex;
     justify-content: space-around;
   }
@@ -241,14 +241,18 @@ body {
   top: 15vh;
   left: 50%;
   transform: translateX(-50%);
-  width: 85vw;
-  height: 57vh;
-  background-color: #182546;
+  width: 75vw;
+  height: 62vh;
+  background-color: #0D1428;
   border: 5px solid #74DD4F;
   border-radius: 20px;
   &__close-button {
+    padding: 1vh 1vh 0 0;
   }
 }
-
+svg:hover rect {
+  fill: #DD4F4F;
+  transition: 0.15s;
+}
 .calculator {
 }
