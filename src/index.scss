@@ -229,10 +229,11 @@ body {
   }
 }
 
-/* calculator */
+/* modal windows */
 .calculator-window {
   display: flex;
   justify-content: center;
+  align-items: center;
   border: 5px solid #74DD4F;
 }
 .jokes-window {
@@ -261,7 +262,6 @@ body {
   width: 75vw;
   height: 62vh;
   background-color: #0D1428;
- /* border: 5px solid #74DD4F;*/
   border-radius: 20px;
   &__close-button {
     padding: 1vh 1vh 0 0;

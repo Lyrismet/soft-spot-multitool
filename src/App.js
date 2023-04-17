@@ -1,10 +1,10 @@
 
 import React from 'react';
 import './index.scss';
-import Calculator from "./Components/Calculator/Calculator";
-import Jokes from "./Components/Jokes/Jokes";
-import Todolist from "./Components/ToDoList/Todolist";
-import Weather from "./Components/Weather/weather";
+import CalculatorModal from "./Components/Calculator/Calculator-modal";
+import JokesModal from "./Components/Jokes/Jokes-modal";
+import TodolistModal from "./Components/ToDoList/Todolist-modal";
+import WeatherModal from "./Components/Weather/Weather-modal";
 
 
 function App() {
@@ -28,10 +28,10 @@ function App() {
           <img src={process.env.PUBLIC_URL + '/logo192.png'} alt=""/>
         </div>
           <div className="main__buttons">
-              <Calculator selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
-              <Todolist selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
-              <Weather selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
-              <Jokes selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
+              <CalculatorModal selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
+              <TodolistModal selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
+              <WeatherModal selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
+              <JokesModal selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
 
           </div>
       </main>
