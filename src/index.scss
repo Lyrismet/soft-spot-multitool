@@ -232,8 +232,26 @@ body {
 /* calculator */
 .calculator-window {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: center;
+  border: 5px solid #74DD4F;
+}
+.jokes-window {
+  border: 5px solid #DD4FAD;
+  rect {
+    fill: #DD4FAD;
+  }
+}
+.todolist-window {
+  border: 5px solid #DDD84F;
+  rect {
+    fill: #DDD84F;
+  }
+}
+.weather-window {
+  border: 5px solid #4FDDDD;
+  rect {
+    fill: #4FDDDD;
+  }
 }
 .modal-window {
   position: absolute;
@@ -243,11 +261,13 @@ body {
   width: 75vw;
   height: 62vh;
   background-color: #0D1428;
-  border: 5px solid #74DD4F;
+ /* border: 5px solid #74DD4F;*/
   border-radius: 20px;
   &__close-button {
     padding: 1vh 1vh 0 0;
-
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 .modal-window.animated {

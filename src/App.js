@@ -2,9 +2,13 @@
 import React from 'react';
 import './index.scss';
 import Calculator from "./Components/Calculator/Calculator";
+import Jokes from "./Components/Jokes/Jokes";
+import Todolist from "./Components/ToDoList/Todolist";
+import Weather from "./Components/Weather/weather";
 
 
 function App() {
+    const [selectedComponent, setSelectedComponent] = React.useState(null);
   return (
     <div className="App">
       <header className="header">
@@ -24,10 +28,10 @@ function App() {
           <img src={process.env.PUBLIC_URL + '/logo192.png'} alt=""/>
         </div>
           <div className="main__buttons">
-              <Calculator/>
-              <button className="main__button-item yellow">To Do List</button>
-              <button className="main__button-item blue">Weather</button>
-              <button className="main__button-item pink">Joke's</button>
+              <Calculator selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
+              <Todolist selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
+              <Weather selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
+              <Jokes selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
 
           </div>
       </main>
