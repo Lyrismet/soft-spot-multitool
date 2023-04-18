@@ -283,3 +283,69 @@ svg:hover rect {
   fill: #DD4F4F;
   transition: 0.15s;
 }
+
+/* calculator */
+
+.calculator-body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: minmax(2rem,auto) repeat(4, 1fr);
+  grid-gap: 0.3em;
+  background: linear-gradient(#182546, #182546) padding-box,
+  linear-gradient(90deg, #74DD4F,  #DDD84F) border-box;
+  border: 5px solid transparent;
+  border-radius: 10px;
+  width: 35vw;
+  height: 50vh;
+  .span-three{
+    grid-row: span 3;
+    background: linear-gradient(90deg, #74DD4F,  #DDD84F);
+  }
+  &__button-text{
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  >button{
+    font-weight: 700;
+    background-color: #10182D;
+    border-radius: 5px;
+
+  }
+  &__output {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: left;
+    &::after{
+      content: '';
+      background: linear-gradient(90deg, #74DD4F 0%, #DDD84F 100%);
+      width: 100%;
+      height: 5px;
+    }
+
+    .previous-operand {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.5);
+      padding: .55rem;
+    }
+    .current-operand {
+      font-size: 30px;
+      font-weight: 700;
+      padding: .55rem;
+    }
+  }
+
+  &__line {
+    background: linear-gradient(90deg, #74DD4F 0%, #DDD84F 100%);
+    width: 100%;
+    height: 6px;
+  }
+}
+
+
+
+
