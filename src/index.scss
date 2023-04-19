@@ -236,24 +236,31 @@ body {
   align-items: center;
   border: 5px solid #74DD4F;
 }
+
 .jokes-window {
   border: 5px solid #DD4FAD;
+
   rect {
     fill: #DD4FAD;
   }
 }
+
 .todolist-window {
   border: 5px solid #DDD84F;
+
   rect {
     fill: #DDD84F;
   }
 }
+
 .weather-window {
   border: 5px solid #4FDDDD;
+
   rect {
     fill: #4FDDDD;
   }
 }
+
 .modal-window {
   position: absolute;
   top: 15vh;
@@ -263,6 +270,7 @@ body {
   height: 62vh;
   background-color: #0D1428;
   border-radius: 20px;
+
   &__close-button {
     padding: 1vh 1vh 0 0;
     position: absolute;
@@ -270,15 +278,18 @@ body {
     top: 0;
   }
 }
+
 .modal-window.animated {
   transition: 0.3s;
   opacity: 0;
   visibility: hidden;
-  &.show{
+
+  &.show {
     opacity: 1;
     visibility: visible;
   }
 }
+
 svg:hover rect {
   fill: #DD4F4F;
   transition: 0.15s;
@@ -287,31 +298,50 @@ svg:hover rect {
 /* calculator */
 
 .calculator-body {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: minmax(2rem,auto) repeat(4, 1fr);
+  grid-template-rows: minmax(2rem, auto) repeat(4, 1fr);
   grid-gap: 0.3em;
   background: linear-gradient(#182546, #182546) padding-box,
-  linear-gradient(90deg, #74DD4F,  #DDD84F) border-box;
+  linear-gradient(90deg, #74DD4F, #DDD84F) border-box;
   border: 5px solid transparent;
   border-radius: 10px;
   width: 35vw;
   height: 50vh;
-  .span-three{
+  padding: 20px;
+
+  .span-three {
     grid-row: span 3;
-    background: linear-gradient(90deg, #74DD4F,  #DDD84F);
+    background: linear-gradient(90deg, #74DD4F, #DDD84F);
   }
-  &__button-text{
+
+  &__button-text {
     font-size: 16px;
     text-transform: uppercase;
   }
-  >button{
+
+  > button {
     font-weight: 700;
     background-color: #10182D;
     border-radius: 5px;
 
+    &:hover, :focus {
+      background-color: #35539f;
+    }
+
+    &.calculator-body__sign {
+      background-color: #26396A;
+
+      &:hover, :focus {
+        background-color: #DDD84F;
+        color: #0D1428;
+      }
+    }
   }
+
   &__output {
+    height: 12vh;
     grid-column: 1/-1;
     display: flex;
     flex-direction: column;
@@ -320,11 +350,16 @@ svg:hover rect {
     word-wrap: break-word;
     word-break: break-all;
     text-align: left;
-    &::after{
+    margin: -20px -20px 0;
+
+    &::after {
       content: '';
       background: linear-gradient(90deg, #74DD4F 0%, #DDD84F 100%);
       width: 100%;
       height: 5px;
+      position: absolute;
+      top: 11vh;
+      right: 0;
     }
 
     .previous-operand {
@@ -332,20 +367,13 @@ svg:hover rect {
       color: rgba(255, 255, 255, 0.5);
       padding: .55rem;
     }
+
     .current-operand {
       font-size: 30px;
       font-weight: 700;
       padding: .55rem;
     }
   }
-
-  &__line {
-    background: linear-gradient(90deg, #74DD4F 0%, #DDD84F 100%);
-    width: 100%;
-    height: 6px;
-  }
 }
-
-
 
 
