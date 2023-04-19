@@ -60,16 +60,16 @@ function Calculator() {
             <DigitButton digit="4" dispatch={dispatch} />
             <DigitButton digit="5" dispatch={dispatch} />
             <DigitButton digit="6" dispatch={dispatch} />
-            <OperationButton digit="+" dispatch={dispatch}/>
+            <OperationButton operation="+" dispatch={dispatch}/>
             <button className="span-three">=</button>
             <DigitButton digit="7" dispatch={dispatch} />
             <DigitButton digit="8" dispatch={dispatch} />
             <DigitButton digit="9" dispatch={dispatch} />
-            <button className="calculator-body__sign">-</button>
+            <OperationButton operation="-" dispatch={dispatch}/>
             <DigitButton digit="." dispatch={dispatch} />
             <DigitButton digit="0" dispatch={dispatch} />
-            <OperationButton digit="&divide;" dispatch={dispatch}/>
-            <button className="calculator-body__sign">×</button>
+            <OperationButton operation="&divide;" dispatch={dispatch}/>
+            <OperationButton operation="×" dispatch={dispatch}/>
         </div>
 
     )
