@@ -23,12 +23,12 @@ function reducer(state, {type, payload}) {
             if (payload.digit === "0" && state.currentOperand === "0") {
                 return state;
             }
-            if (payload.digit === "." && state.currentOperand.includes(".")) {
+            if (payload.digit === "." && state.currentOperand != null && state.currentOperand.includes(".")) {
                 return state;
             }
             return {
                 ...state,
-                currentOperand: `${state.currentOperand || ""}${payload.digit}`,
+                currentOperand: `${state.currentOperand ?? ""}${payload.digit}`
             }
         case ACTIONS.CHOOSE_OPERATION:
             if (state.currentOperand == null && state.previousOperand == null) {
