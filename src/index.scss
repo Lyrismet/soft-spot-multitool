@@ -238,14 +238,21 @@ body {
 }
 
 .jokes-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 5px solid #DD4FAD;
 
   rect {
+
     fill: #DD4FAD;
   }
 }
 
 .todolist-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 5px solid #DDD84F;
 
   rect {
@@ -254,6 +261,9 @@ body {
 }
 
 .weather-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 5px solid #4FDDDD;
 
   rect {
@@ -378,31 +388,62 @@ svg:hover rect {
 
 /* weather */
 .weather {
-  &__body {
+  &__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("img/clouds.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 5px solid #4FDDDD;
+    border-radius: 10px;
+    width: 35vw;
+    height: 50vh;
+    padding: 25px;
   }
 
   &__location-date {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   &__title-location {
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
   }
 
   &__title-date {
+    font-size: 20px;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
   }
 
   &__temp-info {
+    margin-top: 3px;
   }
 
   &__temp-value {
+    font-size: 64px;
+    font-weight: 700;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   }
 
   &__temp-state {
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   }
 
   &__temp-emoji {
+    font-size: 40px;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   }
 
   &__search {
+    background-color: white;
+    border-radius: 8px;
   }
 
   &__search-bar {
