@@ -17,14 +17,13 @@ function Weather() {
                 .then(result => {
                     setQuery('');
                     setWeather(result);
-                    console.log(result);
                 });
         }
     }
 
     const dateBuilder = (d) => {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        let days = ["Sunday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Monday"];
+        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
         let day = days[d.getDay()];
         let date = d.getDate();
         let month = months[d.getMonth()];
@@ -34,15 +33,19 @@ function Weather() {
 
     return (
         <div className="weather__body">
-            <div className="weather__location-date">
-                <div className="weather__title-location">Moscow, RU</div>
-                <div className="weather__title-date">22 Apr, 2023</div>
+            {(typeof weather.main != "undefined") ? (
+            <div>
+                <div className="weather__location-date">
+                    <div className="weather__title-location">{weather.name}, {weather.sys.country}</div>
+                    <div className="weather__title-date">22 Apr, 2023</div>
+                </div>
+                <div className="weather__temp-info">
+                    <div className="weather__temp-value">{Math.round(weather.main.temp)}°C</div>
+                    <div className="weather__temp-state">{weather.weather[0].main}</div>
+                    <div className="weather__temp-emoji">{weather.weather[0].icon}️</div>
+                </div>
             </div>
-            <div className="weather__temp-info">
-                <div className="weather__temp-value">10°C</div>
-                <div className="weather__temp-state">Clouds</div>
-                <div className="weather__temp-emoji">☁️</div>
-            </div>
+            ) : ('')}
             <div className="weather__search">
                 <svg width="17" height="17" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="6.93585" cy="6.93585" r="5.93585" stroke="#3F5CAD" stroke-width="2"/>
