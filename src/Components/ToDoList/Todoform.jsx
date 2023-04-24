@@ -16,7 +16,7 @@ function ToDoForm(){
             value={userInput}
                    onChange={handleChange}
                    onKeyDown={handleKeyPress}
-                   placeholder="Enter a task"
+                   placeholder="Enter a task..."
             />
             <button>Save</button>
         </form>

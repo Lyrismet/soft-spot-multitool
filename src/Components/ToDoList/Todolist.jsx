@@ -16,7 +16,6 @@ function Todolist() {
     return (
         <div className="todolist__body">
             <h1 className="todolist__title">To-do list: <span>{todos.length}</span></h1>
-            <ToDoForm addTask={addTask}/>
             {todos.map((todo) => {
                 return (
                     <Todo
@@ -27,6 +26,7 @@ function Todolist() {
                     />
                 )
             })}
+            <ToDoForm addTask={addTask}/>
         </div>
     );
 }
