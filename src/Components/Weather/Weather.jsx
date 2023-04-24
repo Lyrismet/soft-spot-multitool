@@ -52,7 +52,7 @@ function Weather() {
                 .then(result => {
                     setQuery('');
                     setWeather(result);
-
+                    console.log(result);
                     const iconCode = result.weather[0].icon;
                     const icon = icons[iconCode];
                     const emoji = document.querySelector(".weather__temp-emoji");
@@ -67,6 +67,7 @@ function Weather() {
                     const condition = result.weather[0].main;
                     setWeatherClass(getWeatherClass(condition));
                 })
+
 
                 .catch(error => {
                     setShowInput(false);
