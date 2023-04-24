@@ -1,5 +1,5 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&display=swap');
 /* reset */
 * {
   padding: 0;
@@ -466,7 +466,6 @@ svg:hover rect {
       font-size: 18px;
     }
   }
-
 }
 
 .clouds {
@@ -489,3 +488,34 @@ svg:hover rect {
   transition: 0.3s;
 }
 
+/* todolist */
+
+.todolist {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #182546;
+    border: 5px solid #DDD84F;
+    border-radius: 10px;
+    width: 35vw;
+    height: 50vh;
+    padding: 25px;
+  }
+  &__title{
+    font-size: 40px;
+    font-weight: 700;
+  }
+  span{
+    color: #DDD84F;
+  }
+  form{
+
+  }
+  input{
+
+  }
+  button{
+
+  }
+}

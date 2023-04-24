@@ -1,4 +1,5 @@
 import React from 'react';
+import Todolist from "./Todolist";
 
 const TodolistModal = ({ selectedComponent, setSelectedComponent }) => {
     const [open, setOpen] = React.useState(false);
@@ -18,8 +19,7 @@ const TodolistModal = ({ selectedComponent, setSelectedComponent }) => {
                         <path d="M33.6777 16L16.0001 33.6777" stroke="#1D2C53" stroke-width="4" stroke-linecap="round"/>
                     </svg>
                 </button>
-                <div className="todolist__body">
-                </div>
+                <Todolist />
             </div>
         </div>
     );
