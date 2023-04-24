@@ -388,7 +388,7 @@ svg:hover rect {
 
 /* weather */
 .weather {
-  &__body{
+  &__body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -401,12 +401,14 @@ svg:hover rect {
     height: 50vh;
     padding: 25px;
   }
-  &__error-message, &__input-message{
+
+  &__error-message, &__input-message {
     font-size: 30px;
-      font-weight: 700;
+    font-weight: 700;
     margin-top: 20%;
     text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
   }
+
   &__location-date {
     display: flex;
     flex-direction: column;
@@ -458,10 +460,32 @@ svg:hover rect {
     color: #0D1428;
     width: 90%;
     padding: 5px 10px;
+
     &::placeholder {
       color: #3F5CAD;
       font-size: 18px;
     }
   }
+
+}
+
+.clouds {
+  background-image: url("img/clouds.png");
+  transition: 0.3s;
+}
+
+.sunny {
+  background-image: url("img/sun.png");
+  transition: 0.3s;
+}
+
+.rainy {
+  background-image: url("img/rain.png");
+  transition: 0.3s;
+}
+
+.snowy {
+  background-image: url("img/snow.png");
+  transition: 0.3s;
 }
 

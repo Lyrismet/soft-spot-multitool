@@ -20,8 +20,8 @@ const icons = {
     "10n": "🌦️",
     "11d": "⛈️",
     "11n": "⛈️",
-    "13d": "❄️",
-    "13n": "❄️",
+    "13d": "🌨️",
+    "13n": "🌨️",
     "50d": "🌫️",
     "50n": "🌫️",
 };
@@ -29,7 +29,22 @@ function Weather() {
     const [query, setQuery] = React.useState('');
     const [weather, setWeather] = React.useState({});
     const [showInput, setShowInput] = React.useState(false);
-
+    const [weatherClass, setWeatherClass] = React.useState('');
+    const getWeatherClass = (condition) => {
+        switch (condition) {
+            case 'Clouds':
+                return 'clouds';
+            case 'Clear':
+                return 'sunny';
+            case 'Rain':
+            case 'Drizzle':
+                return 'rainy';
+            case 'Snow':
+                return 'snowy';
+            default:
+                return '';
+        }
+    }
     const search = evt => {
         if (evt.key === "Enter") {
             fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
@@ -49,13 +64,16 @@ function Weather() {
                     } else {
                         setShowInput(true);
                     }
+                    const condition = result.weather[0].main;
+                    setWeatherClass(getWeatherClass(condition));
                 })
 
                 .catch(error => {
                     setShowInput(false);
                 });
-        }
-    }
+
+
+    }}
 
 
     const dateBuilder = (d) => {
@@ -69,7 +87,7 @@ function Weather() {
     }
 
     return (
-        <div className="weather__body">
+        <div className={`weather__body ${weatherClass}`}>
             {(typeof weather.main != "undefined") ? (
             <div>
                 <div className="weather__location-date">
