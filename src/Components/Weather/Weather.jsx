@@ -5,10 +5,30 @@ const api = {
     key: "a72d83c9186b22629cf76ca4edff54ea",
     base: "https://api.openweathermap.org/data/2.5/"
 }
-
+const icons = {
+    "01d": "☀️",
+    "01n": "🌙",
+    "02d": "🌤️",
+    "02n": "🌤️",
+    "03d": "🌥️",
+    "03n": "🌥️",
+    "04d": "☁️",
+    "04n": "☁️",
+    "09d": "🌧️",
+    "09n": "🌧️",
+    "10d": "🌦️",
+    "10n": "🌦️",
+    "11d": "⛈️",
+    "11n": "⛈️",
+    "13d": "❄️",
+    "13n": "❄️",
+    "50d": "🌫️",
+    "50n": "🌫️",
+};
 function Weather() {
     const [query, setQuery] = React.useState('');
     const [weather, setWeather] = React.useState({});
+    const [showInput, setShowInput] = React.useState(false);
 
     const search = evt => {
         if (evt.key === "Enter") {
@@ -17,9 +37,26 @@ function Weather() {
                 .then(result => {
                     setQuery('');
                     setWeather(result);
+
+                    const iconCode = result.weather[0].icon;
+                    const icon = icons[iconCode];
+                    const emoji = document.querySelector(".weather__temp-emoji");
+                    emoji.textContent = icon;
+                    setShowInput(true);
+
+                    if (result.cod === 404) {
+                        setShowInput(false);
+                    } else {
+                        setShowInput(true);
+                    }
+                })
+
+                .catch(error => {
+                    setShowInput(false);
                 });
         }
     }
+
 
     const dateBuilder = (d) => {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -28,7 +65,7 @@ function Weather() {
         let date = d.getDate();
         let month = months[d.getMonth()];
         let year = d.getFullYear();
-        return '${day} ${date} ${month} ${year}';
+        return `${day} ${date} ${month} ${year}`;
     }
 
     return (
@@ -37,15 +74,19 @@ function Weather() {
             <div>
                 <div className="weather__location-date">
                     <div className="weather__title-location">{weather.name}, {weather.sys.country}</div>
-                    <div className="weather__title-date">22 Apr, 2023</div>
+                    <div className="weather__title-date">{dateBuilder(new Date())}</div>
                 </div>
                 <div className="weather__temp-info">
                     <div className="weather__temp-value">{Math.round(weather.main.temp)}°C</div>
                     <div className="weather__temp-state">{weather.weather[0].main}</div>
-                    <div className="weather__temp-emoji">{weather.weather[0].icon}️</div>
+                    <div className="weather__temp-emoji">{icons[weather.weather[0].icon]}️</div>
                 </div>
             </div>
-            ) : ('')}
+            ) : (weather.cod === "404" && typeof weather.main === "undefined") ? (
+                <div className="weather__error-message">Incorrect city name. Please try again.</div>
+            ) : (
+                <div className="weather__input-message">Enter a city name</div>
+            )}
             <div className="weather__search">
                 <svg width="17" height="17" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="6.93585" cy="6.93585" r="5.93585" stroke="#3F5CAD" stroke-width="2"/>
