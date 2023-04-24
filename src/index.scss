@@ -406,7 +406,7 @@ svg:hover rect {
     font-size: 30px;
     font-weight: 700;
     margin-top: 20%;
-    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.45);
   }
 
   &__location-date {
@@ -418,12 +418,12 @@ svg:hover rect {
   &__title-location {
     font-size: 36px;
     font-weight: 700;
-    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
   }
 
   &__title-date {
     font-size: 20px;
-    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
   }
 
   &__temp-info {
@@ -433,7 +433,7 @@ svg:hover rect {
   &__temp-value {
     font-size: 64px;
     font-weight: 700;
-    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     text-align: center;
   }
 
@@ -442,13 +442,13 @@ svg:hover rect {
     text-align: center;
     font-weight: 700;
     font-style: italic;
-    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   }
 
   &__temp-emoji {
     font-size: 40px;
     text-align: center;
-    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   }
 
   &__search {
