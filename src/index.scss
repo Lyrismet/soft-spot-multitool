@@ -551,7 +551,7 @@ svg:hover rect {
     background: linear-gradient(180deg, #111B34 0%, rgba(17, 27, 52, 0.7) 65%, rgba(17, 27, 52, 0) 100%);
     border-radius: 15px 15px 0 0;
     max-width: 100%;
-    height: 80%;
+    /*height: 80%;*/
     overflow: auto;
     margin-top: 0.3em;
     padding: 0.45em;
@@ -577,6 +577,8 @@ svg:hover rect {
     background: linear-gradient(90deg, #DDD84F 0.68%, #DD9C4F 97.3%);
     border-radius: 10px;
     min-height: 6.8vh;
+    height: auto;
+
     width: 90%;
     margin-top: 10px;
     padding: 7px 14px;
@@ -597,6 +599,10 @@ svg:hover rect {
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
+  overflow: hidden;
+  word-wrap: break-word;
+  flex: 1;
+  text-align: left;
 }
 
 .tasks-item__close-button {
