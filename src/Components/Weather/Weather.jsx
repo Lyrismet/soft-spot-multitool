@@ -115,7 +115,7 @@ function Weather() {
                 </svg>
                 <input type="text"
                        className="weather__search-bar"
-                       placeholder="Search"
+                       placeholder="New York, US"
                        onChange={e => setQuery(e.target.value)}
                        value={query}
                        onKeyUp={search}/>
