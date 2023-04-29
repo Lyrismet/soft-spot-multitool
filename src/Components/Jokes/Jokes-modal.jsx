@@ -1,4 +1,6 @@
 import React from 'react';
+import Jokes from "./Jokes";
+import Activity from "./Activity";
 
 const JokesModal = ({ selectedComponent, setSelectedComponent }) => {
     const [open, setOpen] = React.useState(false);
@@ -19,6 +21,8 @@ const JokesModal = ({ selectedComponent, setSelectedComponent }) => {
                     </svg>
                 </button>
                 <div className="jokes__body">
+                    <Jokes />
+                    <Activity />
                 </div>
             </div>
         </div>

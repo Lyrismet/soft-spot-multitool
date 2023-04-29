@@ -610,7 +610,101 @@ svg:hover rect {
   position: absolute;
   right: 0;
 }
-
 .strike {
   text-decoration: line-through;
+}
+
+/* jokes */
+
+.jokes{
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #182546;
+    border: 5px solid #DD4FAD;
+    border-radius: 10px;
+    width: 35vw;
+    height: 50vh;
+    padding: 25px;
+  }
+}
+.jokes-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    background: linear-gradient(90deg, #DD4FAD 0%, #5F7CBD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__answer {
+    margin-top: 0.5em;
+    background: #1D2C53;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 10px;
+    width: 80%;
+  }
+
+  &__setup {
+    color: #B2C8FA;
+  }
+
+  &__punchline {
+    color: #DD4FAD;
+  }
+
+  &__button {
+    margin-top: 0.6em;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #DD4FAD -0.09%, #5F7CBD 100%);
+    border-radius: 10px;
+    padding: 0.6em 1.3em;
+  }
+}
+
+.activity-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    background: linear-gradient(90deg, #74DD4F 0%, #DDD84F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__answer {
+    margin-top: 0.5em;
+    background: #1D2C53;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 10px;
+    width: 80%;
+  }
+
+  &__setup {
+    color: #DBFFCE;
+  }
+
+  &__button {
+    margin-top: 0.6em;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #74DD4F -0.09%, #5F7CBD 99.48%);
+    border-radius: 10px;
+    padding: 0.6em 1.3em;
+  }
 }
