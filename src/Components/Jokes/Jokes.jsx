@@ -7,16 +7,21 @@ function Jokes() {
     const [randomJoke, setRandomJoke] = useState(null);
     const generate = () => {
         fetch(api.url).then(res => res.json()).then(result => {
-
+            setRandomJoke({
+                setup: result.setup,
+                punchline: result.punchline
+            })
         })
     }
     return (
         <div className="jokes-section">
             <h1 className="jokes-section__title">Generate random joke</h1>
+            {randomJoke ? (
             <div className="jokes-section__answer">
-                <p className="jokes-section__setup">What is the tallest building in the world?</p>
-                <p className="jokes-section__punchline">The library, it’s got the most stories!</p>
+                <p className="jokes-section__setup">{randomJoke.setup}</p>
+                <p className="jokes-section__punchline">{randomJoke.punchline}</p>
             </div>
+            ) : null}
             <button className="jokes-section__button"
             onClick={generate}
             >generate!</button>
