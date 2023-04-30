@@ -716,10 +716,13 @@ svg:hover rect {
     font-size: 15px;
   }
   .main__title {
-    font-size: 3rem;
+    font-size: 2.9rem;
   }
   .main__intro p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+  .main__text-morse {
+      margin-bottom: -0.6em;
   }
   .main__buttons{
     flex-direction: column;
@@ -728,13 +731,21 @@ svg:hover rect {
   .calculator, .todolist, .weather, .jokes{
     margin-bottom: 2vh;
   }
-  .modal-window{
-
+  .modal-window {
+    top: 11vh;
+    width: 95vw;
+    height: 65vh;
+    svg{
+      width: 80%;
+    }
   }
   .main__button-item {
     width: 190px;
     height: 50px;
     font-size: inherit;
     text-transform: uppercase;
+  }
+  .show .main__buttons{
+    margin-top: 40vh;
   }
 }
