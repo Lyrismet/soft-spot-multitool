@@ -620,7 +620,7 @@ svg:hover rect {
   &__body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #182546;
     border: 5px solid #DD4FAD;
     border-radius: 10px;
@@ -706,5 +706,35 @@ svg:hover rect {
     background: linear-gradient(90deg, #74DD4F -0.09%, #5F7CBD 99.48%);
     border-radius: 10px;
     padding: 0.6em 1.3em;
+  }
+}
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+  body{
+    font-size: 15px;
+  }
+  .main__title {
+    font-size: 3rem;
+  }
+  .main__intro p{
+    font-size: 1.5rem;
+  }
+  .main__buttons{
+    flex-direction: column;
+    margin-top: 3vh;
+  }
+  .calculator, .todolist, .weather, .jokes{
+    margin-bottom: 2vh;
+  }
+  .modal-window{
+
+  }
+  .main__button-item {
+    width: 190px;
+    height: 50px;
+    font-size: inherit;
+    text-transform: uppercase;
   }
 }
