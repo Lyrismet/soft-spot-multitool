@@ -8,6 +8,15 @@ import WeatherModal from "./Components/Weather/Weather-modal";
 
 function App() {
     const [selectedComponent, setSelectedComponent] = React.useState(null);
+    const [isModalOpen, setIsModalOpen] = React.useState(false);
+    React.useEffect(() => {
+        const mainButtons = document.querySelector('.main__buttons');
+        if (isModalOpen && window.innerWidth <= 767) {
+            mainButtons.classList.add('mobile');
+        } else {
+            mainButtons.classList.remove('mobile');
+        }
+    }, [isModalOpen]);
     return (
         <div className="App">
             <header className="header">
@@ -27,10 +36,10 @@ function App() {
                     <img src={process.env.PUBLIC_URL + '/logo192.png'} alt=""/>
                 </div>
                 <div className="main__buttons">
-                    <CalculatorModal selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
-                    <TodolistModal selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
-                    <WeatherModal selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
-                    <JokesModal selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent}/>
+                    <CalculatorModal selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent} setIsModalOpen={setIsModalOpen}/>
+                    <TodolistModal selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent} setIsModalOpen={setIsModalOpen}/>
+                    <WeatherModal selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent} setIsModalOpen={setIsModalOpen}/>
+                    <JokesModal selectedComponent={selectedComponent} setSelectedComponent={setSelectedComponent} setIsModalOpen={setIsModalOpen}/>
 
                 </div>
             </main>

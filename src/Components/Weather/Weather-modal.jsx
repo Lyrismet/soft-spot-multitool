@@ -1,19 +1,25 @@
 import React from 'react';
 import Weather from './Weather';
 
-const WeatherModal = ({selectedComponent, setSelectedComponent}) => {
+const WeatherModal = ({selectedComponent, setSelectedComponent, setIsModalOpen}) => {
     const [open, setOpen] = React.useState(false);
     const handleButtonClick = () => {
         setSelectedComponent("weather");
         setOpen(true);
+        setIsModalOpen(true);
     }
+    const handleClose = () => {
+        setSelectedComponent(null);
+        setOpen(false);
+        setIsModalOpen(false);
+    };
     return (
 
         <div className="weather">
             <button onClick={handleButtonClick} className="main__button-item blue">Weather</button>
             <div
                 className={`weather-window modal-window animated ${selectedComponent === "weather" && open ? 'show' : ''}`}>
-                <button className="modal-window__close-button">
+                <button className="modal-window__close-button" onClick={handleClose}>
                     <svg onClick={() => {
                         setSelectedComponent(null);
                         setOpen(false)

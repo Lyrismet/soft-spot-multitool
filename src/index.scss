@@ -710,7 +710,9 @@ svg:hover rect {
 }
 
 /* responsive */
-
+.mobile{
+  margin-top: 45vh;
+}
 @media screen and (max-width: 768px) {
   body{
     font-size: 15px;
@@ -726,7 +728,9 @@ svg:hover rect {
   }
   .main__buttons{
     flex-direction: column;
-    margin-top: 3vh;
+  }
+  .main img{
+    margin-bottom: -6em;
   }
   .calculator, .todolist, .weather, .jokes{
     margin-bottom: 2vh;
@@ -745,7 +749,7 @@ svg:hover rect {
     font-size: inherit;
     text-transform: uppercase;
   }
-  .show .main__buttons{
-    margin-top: 40vh;
+  .footer__author {
+    font-size: 0.9rem;
   }
 }
