@@ -711,11 +711,14 @@ svg:hover rect {
 
 /* responsive */
 .mobile{
-  margin-top: 45vh;
+  margin-top: 85vw;
 }
 @media screen and (max-width: 768px) {
   body{
     font-size: 15px;
+  }
+  .header__clover{
+    font-size: 18px;
   }
   .main__title {
     font-size: 2.9rem;
@@ -736,11 +739,11 @@ svg:hover rect {
     margin-bottom: 2vh;
   }
   .modal-window {
-    top: 11vh;
+    top: 10vh;
     width: 95vw;
     height: 65vh;
     svg{
-      width: 80%;
+      width: 75%;
     }
   }
   .main__button-item {
@@ -751,5 +754,59 @@ svg:hover rect {
   }
   .footer__author {
     font-size: 0.9rem;
+  }
+  .calculator-body, .todolist__body, .weather__body, .jokes__body{
+    position: relative;
+    bottom: -20px;
+    width: 80vw;
+    height: 50vh;
+  }
+  .calculator-body__button-text {
+    font-size: 13px;
+  }
+  .todolist__title{
+    font-size: 1.6rem;
+  }
+  .todolist__body{
+    input{
+      padding: 10px 0 10px 10px;
+      &::placeholder{
+        font-size: 15px;
+      }
+    }
+  }
+  .weather__search svg{
+    width: 13px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: -2px;
+  }
+  .weather__error-message, .weather__input-message {
+    font-size: 26px;
+    margin-top: 45%;
+  }
+  .weather__title-location {
+    font-size: 28px;
+  }
+  .weather__title-date {
+    font-size: 16px;
+  }
+  .weather__temp-value {
+    font-size: 48px;
+  }
+  .weather__temp-state {
+    font-size: 24px;
+  }
+  .weather__temp-info {
+    margin-top: 16px;
+  }
+  .jokes-section__title, .activity-section__title {
+    font-size: 22px;
+  }
+  .jokes-section__button, .activity-section__button {
+    font-size: 14px;
+  }
+  .jokes-section__answer, .activity-section__answer {
+    font-size: 14px;
   }
 }
