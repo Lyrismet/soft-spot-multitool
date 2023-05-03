@@ -10,5 +10,5 @@ Project can be viewed at the link:
 > https://lyrismet.github.io/soft-spot-multitool/
 
 ### Stack: 
-#### React, Webpack, JavaScript, SCSS
+#### HTML, SCSS, JavaScript, React, Webpack
 
