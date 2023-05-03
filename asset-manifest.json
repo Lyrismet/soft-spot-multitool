@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/soft-spot-multitool/static/css/main.32ccb83e.chunk.css",
+    "main.js": "/soft-spot-multitool/static/js/main.0f2665e6.chunk.js",
+    "main.js.map": "/soft-spot-multitool/static/js/main.0f2665e6.chunk.js.map",
+    "runtime-main.js": "/soft-spot-multitool/static/js/runtime-main.da57ee8d.js",
+    "runtime-main.js.map": "/soft-spot-multitool/static/js/runtime-main.da57ee8d.js.map",
+    "static/js/2.3d12ead7.chunk.js": "/soft-spot-multitool/static/js/2.3d12ead7.chunk.js",
+    "static/js/2.3d12ead7.chunk.js.map": "/soft-spot-multitool/static/js/2.3d12ead7.chunk.js.map",
+    "index.html": "/soft-spot-multitool/index.html",
+    "static/css/main.32ccb83e.chunk.css.map": "/soft-spot-multitool/static/css/main.32ccb83e.chunk.css.map",
+    "static/js/2.3d12ead7.chunk.js.LICENSE.txt": "/soft-spot-multitool/static/js/2.3d12ead7.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/soft-spot-multitool/static/media/sun.d55ed84a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da57ee8d.js",
+    "static/js/2.3d12ead7.chunk.js",
+    "static/css/main.32ccb83e.chunk.css",
+    "static/js/main.0f2665e6.chunk.js"
+  ]
+}
