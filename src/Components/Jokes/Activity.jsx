@@ -1,4 +1,5 @@
-import {useState} from "react";
+
+import React, {useState} from "react";
 
 const api = {
     url: "https://www.boredapi.com/api/activity"

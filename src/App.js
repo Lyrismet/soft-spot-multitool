@@ -1,5 +1,6 @@
 import React from 'react';
-import './index.scss';
+/*import './index.scss';*/
+import './index.css';
 import CalculatorModal from "./Components/Calculator/Calculator-modal";
 import JokesModal from "./Components/Jokes/Jokes-modal";
 import TodolistModal from "./Components/ToDoList/Todolist-modal";
