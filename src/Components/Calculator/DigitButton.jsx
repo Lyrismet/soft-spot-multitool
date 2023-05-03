@@ -1,3 +1,4 @@
+import React from 'react';
 import {ACTIONS} from "./Calculator";
 
 export default function DigitButton({dispatch, digit}) {
