@@ -129,6 +129,7 @@ function formatOperand(operand) {
     return `${INTEGER_FORMATTER.format(integer)}.${decimal}`
 }
 
+
 function Calculator() {
     const [{ currentOperand, previousOperand, operation }, dispatch] = useReducer(
         reducer,
