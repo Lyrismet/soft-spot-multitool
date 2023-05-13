@@ -6,6 +6,7 @@ import JokesModal from "./Components/Jokes/Jokes-modal";
 import TodolistModal from "./Components/ToDoList/Todolist-modal";
 import WeatherModal from "./Components/Weather/Weather-modal";
 
+// Slava was here
 
 function App() {
     const [selectedComponent, setSelectedComponent] = React.useState(null);
